@@ -11,5 +11,7 @@ export default defineConfig({
         tailwind({
             applyBaseStyles: false
         })
-    ]
+    ],
+    site: 'https://dave-314land.github.io/',
+    base: 'portfolio-site',
 });
