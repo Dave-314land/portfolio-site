@@ -1,19 +1,15 @@
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
 import {
     Dialog,
     DialogContent,
     DialogDescription,
     DialogHeader,
-    DialogFooter,
     DialogTitle,
   } from '@/components/ui/dialog'
-
+import { ContactForm } from '../form/ContactForm'
 
 export const ContactDialog = ({open, setOpen}) => {
     const handleCloseDialog = (event) => {
-        event.preventDefault();
+        event?.preventDefault();
         setOpen(false);
     }
 
@@ -26,38 +22,7 @@ export const ContactDialog = ({open, setOpen}) => {
                         I'll contact you as soon as I can.
                     </DialogDescription>
                 </DialogHeader>
-                <div className="grid gap-4 py-4">
-                    <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="name" className="text-right">
-                            Name
-                        </Label>
-                        <Input
-                            id="name"
-                            className="col-span-3"
-                        />
-                    </div>
-                    <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="email" className="text-right">
-                            Email
-                        </Label>
-                        <Input
-                            id="email"
-                            className="col-span-3"
-                        />
-                    </div>
-                    <div className="grid grid-cols-4 items-center gap-4">
-                        <Label htmlFor="message" className="text-right">
-                            Message
-                        </Label>
-                        <Input
-                            id="message"
-                            className="col-span-3"
-                        />
-                    </div>
-                </div>
-                <DialogFooter>
-                    <Button type="submit" onClick={handleCloseDialog}>Send message</Button>
-                </DialogFooter>
+                <ContactForm onSave={handleCloseDialog} />
             </DialogContent>
         </Dialog>
     )
