@@ -12,5 +12,5 @@ export default defineConfig({
             applyBaseStyles: false
         })
     ],
-    site: 'http://www.poweredbypiland.com/',
+    site: 'http://poweredbypiland.com/',
 });
