@@ -1,0 +1,34 @@
+---
+import { Image } from 'astro:assets';
+import Skills from './Skills.astro'
+import Timeline from './Timeline.astro';
+import ProfileImg from '../assets/profile-img.jpg'
+---
+
+<section id="about" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-12 md:px-6 lg:px-4">
+    <div class="flex flex-col md:flex-row gap-8 items-start">
+      <div>
+        <Image 
+          src={ProfileImg}
+          alt="Dave Piland"
+          width={400}
+          height={400}
+          class="rounded-full shadow-lg"
+        />
+      </div>
+      
+      <div class="md:w-2/3">
+        <h2 class="text-3xl font-bold mb-4">About Me</h2>
+        <p class="text-gray-600 mb-6">
+          Full Stack Software Engineer with over 5 years of experience building enterprise applications. 
+          Passionate about creating efficient, scalable solutions and mentoring junior developers.
+          Currently focused on developing healthcare technology solutions at TeleTracking Technologies.
+        </p>
+        <Timeline />
+      </div>
+    </div>
+    <Skills></Skills>
+  </div>
+
+</section>
