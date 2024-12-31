@@ -1,0 +1,21 @@
+[
+  {
+    "id": 0,
+    "title": "TFFB Ipsum",
+    "description": "A Lorem Ipsum generator based on The Fantasy Footballers Podcast. I'm an avid consumer of this show and built this for fun.",
+    "technologies": ["React"],
+    "siteUrl": "https://tffb-ipsum.com/",
+    "githubUrl": "https://github.com/Dave-314land/fantasy-footballers-lorem-ipsum-generator"
+  },
+
+  {
+    "id": 1,
+    "title": "Project 2",
+    "description": "A brief description of project 2.",
+    "image": "/path/to/project2-image.jpg",
+    "technologies": ["Vue.js", "Express", "PostgreSQL"],
+    "siteUrl": "https://project2.com",
+    "githubUrl": "https://github.com/yourusername/project2"
+  }
+]
+  
