@@ -3,9 +3,11 @@ import '@/styles/globals.css'
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Main from '../components/Main.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<Layout>
+<Layout class="max-w-xl">
     <Header></Header>
-    <Main class="min-h-screen bg-white"></Main>
+    <Main></Main>
+    <Footer></Footer>
 </Layout>
