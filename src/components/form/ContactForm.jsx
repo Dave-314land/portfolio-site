@@ -1,6 +1,8 @@
 
+import { useState, useEffect } from "react"
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import useWeb3Forms from "@web3forms/react"
 import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
@@ -29,6 +31,7 @@ const formSchema = z.object({
 });
 
 export const ContactForm = ({onSave}) => {
+
     const form = useForm({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -38,18 +41,40 @@ export const ContactForm = ({onSave}) => {
         },
     });
 
-    async function onSubmit(values) {
-        console.log(values);
-        onSave();
-    }
+    const {reset, handleSubmit} = useForm();
+
+    const [isSuccess, setIsSuccess] = useState(false);
+    const [result, setResult] = useState(null);
+
+    const accessKey = "4533aa7e-0053-4b65-948b-5515cf9fa536";
+
+    const { submit: onSubmit } = useWeb3Forms({
+        access_key: accessKey,
+        settings: {
+            from_name: "Powered By Piland",
+            subject: "New Contact Message from your portfolio site",
+        },
+        onSuccess: (msg, data) => {
+            setIsSuccess(true);
+            setResult(msg);
+            onSave();
+            reset();
+        },
+        onError: (msg, data) => {
+            setIsSuccess(false);
+            setResult(msg);
+        },
+    });
+
+    // async function onSubmit(values) {
+    //     console.log(values);
+    //     onSave();
+    // }
 
     return (
         <Form {...form}>
             <form 
-                onSubmit={form.handleSubmit(onSubmit)} 
-                className="space-y-8"
-                action="https://api.web3forms.com/submit" 
-                method="POST">
+                onSubmit={form.handleSubmit(onSubmit)} >
                 
                 {/* web3forms access key */}
                 <input type="hidden" name="access_key" value="4533aa7e-0053-4b65-948b-5515cf9fa536"></input>
