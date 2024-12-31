@@ -12,6 +12,5 @@ export default defineConfig({
             applyBaseStyles: false
         })
     ],
-    site: 'https://dave-314land.github.io/',
-    base: 'portfolio-site',
+    site: 'http://www.poweredbypiland.com/',
 });
