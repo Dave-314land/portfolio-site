@@ -1,6 +1,7 @@
 ---
 import { Github, Linkedin, FileText } from 'lucide-astro';
 import PoweredByPiland from './PoweredByPiland.astro'
+import { Contact } from './Contact'
 ---
 
 <header id="top">
@@ -25,6 +26,7 @@ import PoweredByPiland from './PoweredByPiland.astro'
               <a href="https://dave-piland-resume.tiiny.site" target="_blank" rel="noopener noreferrer">
                 <FileText class="w-5 h-5 hover:text-sky-500 hover:scale-125 transition-colors" />
               </a>
+              <Contact client:load/>
           </div>
       </div>
   </nav>
