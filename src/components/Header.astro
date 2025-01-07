@@ -1,6 +1,6 @@
 ---
-import { Github, Linkedin, FileText, Menu, X } from 'lucide-astro';
 import PoweredByPiland from './PoweredByPiland.astro'
+import DesktopNav from './DesktopNav.astro'
 import { MobileNav } from './MobileNav'
 ---
 
@@ -8,33 +8,10 @@ import { MobileNav } from './MobileNav'
   <nav class="fixed w-full bg-white/80 backdrop-blur-sm border-b z-50">
     <div class="container mx-auto px-4 lg:px-10 h-16 flex items-center justify-between">
       <PoweredByPiland></PoweredByPiland>
-
-      <!-- Desktop view -->
-      <div class="hidden lg:flex items-center gap-6">
-        <li class="list-none">
-          <a href="#about" class="hover:text-sky-500">About</a>
-        </li>
-        <li class="list-none">
-          <a href="#work" class="hover:text-sky-500">Projects</a>
-        </li>
-      </div>
-      <div class="hidden lg:flex items-center gap-6 ml-6">
-        <a href="https://github.com/Dave-314land" target="_blank" rel="noopener noreferrer">
-          <Github class="w-5 h-5 hover:text-sky-500 hover:scale-125 transition-colors" />
-        </a>
-        <a href="https://www.linkedin.com/in/davepiland/" target="_blank" rel="noopener noreferrer">
-          <Linkedin class="w-5 h-5 hover:text-sky-500 hover:scale-125 transition-colors" />
-        </a>
-        <a href="https://dave-piland-resume.tiiny.site" target="_blank" rel="noopener noreferrer">
-          <FileText class="w-5 h-5 hover:text-sky-500 hover:scale-125 transition-colors" />
-        </a>
-      </div>
-
-      <!-- Mobile view -->
-      <div class="lg:hidden">
-        <MobileNav client:load/>
-      </div>
-      
+      <!-- Desktop view - hidden on small and medium screens -->
+      <DesktopNav />
+      <!-- Mobile view - visible on small and medium screens -->
+      <MobileNav client:load/>
     </div>
   </nav>
 </header>

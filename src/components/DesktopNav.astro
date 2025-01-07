@@ -1,0 +1,24 @@
+---
+import { Github, Linkedin, FileText } from 'lucide-astro';
+---
+
+<!-- Desktop view -->
+<div class="hidden lg:flex items-center gap-6">
+    <li class="list-none">
+      <a href="#about" class="hover:text-sky-500">About</a>
+    </li>
+    <li class="list-none">
+      <a href="#work" class="hover:text-sky-500">Projects</a>
+    </li>
+</div>
+<div class="hidden lg:flex items-center gap-6 ml-6">
+    <a href="https://github.com/Dave-314land" target="_blank" rel="noopener noreferrer">
+      <Github class="w-5 h-5 hover:text-sky-500 hover:scale-125 transition-colors" />
+    </a>
+    <a href="https://www.linkedin.com/in/davepiland/" target="_blank" rel="noopener noreferrer">
+      <Linkedin class="w-5 h-5 hover:text-sky-500 hover:scale-125 transition-colors" />
+    </a>
+    <a href="https://dave-piland-resume.tiiny.site" target="_blank" rel="noopener noreferrer">
+      <FileText class="w-5 h-5 hover:text-sky-500 hover:scale-125 transition-colors" />
+    </a>
+</div>
