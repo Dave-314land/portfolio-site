@@ -17,12 +17,12 @@ export const MobileNavLinks = ({ isClicked, closeMenu }: { isClicked: boolean, c
                 </li>
                 <li className="list-none">
                     <a
-                        href="#work"
+                        href="#projects"
                         className="block px-4 py-2 text-md font-semibold text-gray-700 hover:bg-gray-50"
                         role="menuitem"
                         onClick={() => isClicked && closeMenu()}
                     >
-                        Work
+                        Projects
                     </a>
                 </li>
             </div>

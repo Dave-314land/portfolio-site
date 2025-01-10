@@ -5,13 +5,13 @@ import { MobileNav } from './MobileNav'
 ---
 
 <header id="top">
-  <nav class="fixed w-full bg-white/80 backdrop-blur-sm border-b z-50">
-    <div class="container mx-auto px-4 lg:px-10 h-16 flex items-center justify-between">
-      <PoweredByPiland></PoweredByPiland>
-      <!-- Desktop view - hidden on small and medium screens -->
-      <DesktopNav />
-      <!-- Mobile view - visible on small and medium screens -->
-      <MobileNav client:load/>
+  <nav class="fixed container mx-auto px-4 bg-white/80 backdrop-blur-sm border-b z-50">
+    <div class="h-16 flex items-center justify-between">
+        <PoweredByPiland></PoweredByPiland>
+        <!-- Desktop view - hidden on small and medium screens -->
+        <DesktopNav />
+        <!-- Mobile view - visible on small and medium screens -->
+        <MobileNav client:load/>
     </div>
   </nav>
 </header>
