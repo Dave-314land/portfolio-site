@@ -7,7 +7,7 @@ export const MobileNav = () => {
     const closeMenu = () => setIsToggled(false);
 
   return (
-        <div className="lg:hidden pt-2 pr-2">
+        <div className="lg:hidden pt-2 pr-2 md:pr-4">
             <button onClick={() => setIsToggled(!toggle)}>{toggle ? <X /> : <Menu />}</button>
             { toggle && <MobileNavLinks isClicked={true} closeMenu={closeMenu}/>}
         </div>
