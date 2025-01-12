@@ -8,6 +8,7 @@ import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Check } from 'lucide-react';
 
 import {
     Form,
@@ -44,6 +45,8 @@ export const ContactForm = ({onSave}) => {
     const {reset, handleSubmit} = useForm();
 
     const [isSuccess, setIsSuccess] = useState(false);
+    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+    
     const [result, setResult] = useState(null);
 
     const accessKey = "4533aa7e-0053-4b65-948b-5515cf9fa536";
@@ -54,7 +57,11 @@ export const ContactForm = ({onSave}) => {
             from_name: "Powered By Piland",
             subject: "New Contact Message from your portfolio site",
         },
-        onSuccess: (msg, data) => {
+        onSuccess: async (msg, data) => {
+            setShowSuccessMessage(true); // Hide the message initially
+            
+            // Simulate an API call as a delay to show the sent button
+            await new Promise((resolve) => setTimeout(resolve, 2000));
             setIsSuccess(true);
             setResult(msg);
             onSave();
@@ -65,11 +72,6 @@ export const ContactForm = ({onSave}) => {
             setResult(msg);
         },
     });
-
-    // async function onSubmit(values) {
-    //     console.log(values);
-    //     onSave();
-    // }
 
     return (
         <Form {...form}>
@@ -136,7 +138,8 @@ export const ContactForm = ({onSave}) => {
                         </FormItem>
                     )}
                 />
-                <Button type="submit">Submit</Button>
+                { !showSuccessMessage && <Button type="submit">Send Message</Button> }
+                { showSuccessMessage && <Button>Message Sent <Check /></Button> }
             </form>
         </Form>
     );
