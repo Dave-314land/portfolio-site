@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import useWeb3Forms from "@web3forms/react"
@@ -76,8 +76,6 @@ export const ContactForm = ({onSave}) => {
             <form 
                 onSubmit={form.handleSubmit(onSubmit)} >
                 
-                {/* web3forms access key */}
-                <input type="hidden" name="access_key" value="4533aa7e-0053-4b65-948b-5515cf9fa536"></input>
                  {/* Honeypot Spam Protection */}
                 <input type="checkbox" name="botcheck" className="hidden" style={{display: 'none'}}></input>
                 {/* name input */}
@@ -133,7 +131,6 @@ export const ContactForm = ({onSave}) => {
                                 />
                             </FormControl>
                             <FormDescription>
-                                I'll read your message as soon as possible
                             </FormDescription>
                             <FormMessage />
                         </FormItem>

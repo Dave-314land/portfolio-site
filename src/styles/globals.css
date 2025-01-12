@@ -65,15 +65,6 @@
   }
 }
 
-@media (max-width:390px) {
-
-  /* CSS To Target anything lower than 390px width of screen */
-
- /* Hide change background color to white */
- #about {
-  background-color: white;
- }
-}
 
 /* Powered styles */
 .powered-text {

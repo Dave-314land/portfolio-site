@@ -40,7 +40,7 @@ export const MobileNavLinks = ({ isClicked, closeMenu }: { isClicked: boolean, c
                 </li>
                 <li className="list-none">
                     <a
-                        href="https://github.com/Dave-314land"
+                        href="https://www.linkedin.com/in/davepiland/"
                         target="_blank" rel="noopener noreferrer"
                         className="block px-4 py-2 text-md font-semibold text-gray-700 hover:bg-gray-50"
                         onClick={() => isClicked && closeMenu()}
@@ -50,7 +50,7 @@ export const MobileNavLinks = ({ isClicked, closeMenu }: { isClicked: boolean, c
                 </li>
                 <li className="list-none">
                     <a
-                        href="https://github.com/Dave-314land"
+                        href="https://dave-piland-resume.tiiny.site"
                         target="_blank" rel="noopener noreferrer"
                         className="block px-4 py-2 text-md font-semibold text-gray-700 hover:bg-gray-50"
                         onClick={() => isClicked && closeMenu()}

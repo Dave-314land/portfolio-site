@@ -1,34 +1,26 @@
 ---
 import { Image } from 'astro:assets';
 import Skills from './Skills.astro'
-import Timeline from './Timeline.astro';
 import ProfileImg from '../assets/profile-img.jpg'
 ---
 
-<section id="about" class="py-10 lg:py-16 bg-gray-50 px-4">
-  <div class="mx-auto mt-4 py-6">
-    <div class="grid grid-rows-2 grid-flow-col gap-8 lg:grid-cols-6 lg:gap-2">
-      <div class="row-span-2 col-span-4 lg:col-start-2 lg:col-end-4">
+<section id="about" class="container mx-auto px-4 py-16 bg-gray-50">
+  <div class="container mx-auto mt-2">
+    <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
+    <div class="container mx-auto px-4 items-center flex flex-col md:flex-row gap-4 lg:gap-8">
         <Image 
           src={ProfileImg}
           alt="Dave Piland"
-          width={400}
-          height={400}
-          class="rounded-full shadow-lg"
+          class="w-full md:w-1/3 lg:w-1/4 h-auto rounded-full shadow-lg mb-2"
         />
-      </div>
-      <div class="col-span-4 lg:col-start-4 lg:col-end-7">
-        <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
-        <p class="text-gray-600 mb-6 text-pretty">
+        <p class="text-gray-600 text-pretty flex-1">
           <strong>Full Stack Software Developer</strong> with 3+ years of experience.
           I solve problems with software and always try to pick the right tool for the job.
+          <br>
+          <br>
           As part of my development process, I excel at thinking from an end user's perspective and balancing that with driving business value.
           At the moment I'm primarily building end-to-end web applications using modern JavaScript frameworks and cloud technologies. 
         </p>
-      </div>
-    </div>
-    <div>
-      <!-- <Timeline /> -->
     </div>
     <div>
       <Skills></Skills>

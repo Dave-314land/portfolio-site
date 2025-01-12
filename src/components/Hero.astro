@@ -2,7 +2,7 @@
 import { FileTextIcon } from 'astro-feather';
 import { Contact } from './Contact'
 ---
-<section class="container mx-auto px-4 pt-48 md:pt-72 lg:pt-90 items-center h-screen bg-white">
+<section class="container mx-auto px-4 pt-40 sm:pt-48 md:pt-72 lg:pt-96 items-center h-screen bg-white">
     <div class="container mx-auto">
         <div class="container mx-auto text-center md:w-11/12 xl:w-9/12 md:text-center">
             <h1 class="mb-8 text-4xl font-extrabold leading-none tracking-normal text-gray-800 md:text-6xl md:tracking-tight">
@@ -13,14 +13,16 @@ import { Contact } from './Contact'
             <p class="px-4 mb-8 text-xl text-gray-600 md:text-xl lg:px-24">
                 I build web applications with modern technologies to solve today's problems.
             </p>
-            <div class="container mx-auto mb-4 space-x-0 md:space-x-2 md:mb-8 md:flex lg:space-x-6 justify-center">
-                <Contact client:load/>
-                <a href="https://dave-piland-resume.tiiny.site" target="_blank">
-                    <button class="inline-flex items-center gap-2 justify-center w-full px-6 py-3 mb-2 text-lg bg-gray-100 hover:bg-gray-300 rounded-2xl sm:w-auto sm:mb-0">
-                        Read My Resume
-                        <FileTextIcon />
-                    </button>
-                </a>
+            <div class="grid place-items-center">
+                <div class="sm:flex sm:gap-4 md:gap-6 lg:gap-8 xl:gap-10">
+                    <Contact client:load />
+                    <a href="https://dave-piland-resume.tiiny.site" target="_blank">
+                        <button class="flex items-center gap-2 justify-center w-full px-6 py-3 mb-2 text-lg bg-gray-100 hover:bg-gray-300 rounded-2xl sm:w-auto sm:mb-0">
+                            Read My Resume
+                            <FileTextIcon />
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
